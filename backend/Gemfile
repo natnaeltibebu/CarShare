@@ -1,0 +1,50 @@
+source "https://rubygems.org"
+
+ruby "3.3.7"  
+
+gem "rails", "~> 8.0.2"
+gem "sqlite3", ">= 2.1"
+gem "puma", ">= 5.0"
+
+# Authentication & API
+gem "bcrypt", "~> 3.1.7"
+gem "jwt"
+gem "rack-cors"
+
+# Rails 8 modern stack
+gem "solid_cache"
+gem "solid_queue"
+gem "bootsnap", require: false
+
+# Deployment and performance
+gem "kamal", require: false
+gem "thruster", require: false
+
+# Windows support
+gem "tzinfo-data", platforms: %i[ windows jruby ]
+
+# Use Active Storage variants 
+gem "image_processing", "~> 1.2"
+
+group :development, :test do
+  # Testing framework
+  gem "rspec-rails"
+  gem "factory_bot_rails"
+  gem "faker"
+  
+  # Debugging
+  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+  
+  # Code quality
+  gem "brakeman", require: false
+  gem "rubocop-rails-omakase", require: false
+end
+
+group :development do
+  gem "listen", "~> 3.3"
+end
+
+group :test do
+  gem "shoulda-matchers"
+  gem "database_cleaner-active_record"
+end

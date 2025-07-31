@@ -1,0 +1,26 @@
+# === Rails backend ===
+/backend/log/
+!/backend/log/.keep
+/backend/tmp/
+!/backend/tmp/.keep
+/backend/.env
+/backend/.bundle
+/backend/vendor/bundle
+/backend/db/*.sqlite3
+/backend/db/*.sqlite3-journal
+/backend/coverage/
+/backend/.byebug_history
+/backend/config/master.key
+/backend/config/credentials.yml.enc
+
+# === React frontend ===
+/frontend/node_modules/
+/frontend/.env
+/frontend/.DS_Store
+
+# === General ===
+.DS_Store
+*.swp
+*.swo
+*.tmp
+*.bak
