@@ -1,4 +1,3 @@
-```markdown
 # CarShare Platform
 
 A modern peer-to-peer car sharing platform built with Ruby on Rails (API) and React.js. Connect car owners with renters through a secure, user-friendly web application.
