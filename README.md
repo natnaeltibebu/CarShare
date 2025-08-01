@@ -1,3 +1,4 @@
+```markdown
 # CarShare Platform
 
 A modern peer-to-peer car sharing platform built with Ruby on Rails (API) and React.js. Connect car owners with renters through a secure, user-friendly web application.
@@ -31,7 +32,6 @@ A modern peer-to-peer car sharing platform built with Ruby on Rails (API) and Re
 - **Active Storage** - File uploads
 - **RSpec** - Testing framework
 
-
 ### Frontend
 - **React 18+** - UI framework
 - **Vite** - Build tool and dev server
@@ -51,7 +51,7 @@ Before you begin, ensure you have the following installed:
 
 ### Verify Installation
 
-\`\`\`bash
+```bash
 # Check Ruby version
 ruby --version
 # Should output: ruby 3.2.x or higher
@@ -67,20 +67,20 @@ npm --version
 # Check SQLite version
 sqlite3 --version
 # Should output: 3.x.x
-\`\`\`
+```
 
 ## Quick Start
 
 ### 1. Clone the Repository
 
-\`\`\`bash
-git clone `https://github.com/natnaeltibebu/CarShare.git`
+```bash
+git clone https://github.com/natnaeltibebu/CarShare.git
 cd CarShare
-\`\`\`
+```
 
 ### 2. Backend Setup
 
-\`\`\`bash
+```bash
 # Navigate to backend directory
 cd backend
 
@@ -94,7 +94,7 @@ rails db:seed
 
 # Start the Rails server
 rails server
-\`\`\`
+```
 
 The backend API will be available at `http://localhost:3000`
 
@@ -102,7 +102,7 @@ The backend API will be available at `http://localhost:3000`
 
 Open a new terminal window:
 
-\`\`\`bash
+```bash
 # Navigate to frontend directory
 cd frontend
 
@@ -111,7 +111,7 @@ npm install
 
 # Start the development server
 npm run dev
-\`\`\`
+```
 
 The frontend will be available at `http://localhost:5173`
 
@@ -122,7 +122,7 @@ The frontend will be available at `http://localhost:5173`
 
 #### Database Setup
 
-\`\`\`bash
+```bash
 cd backend
 
 # Create database
@@ -133,8 +133,7 @@ rails db:migrate
 
 # Seed with sample data
 rails db:seed
-
-\`\`\`
+```
 
 #### Sample Data
 
@@ -144,12 +143,11 @@ The seed file creates:
 - Sample cars with images
 - Sample bookings
 
-
 ## Testing
 
 ### Backend Tests
 
-\`\`\`bash
+```bash
 cd backend
 
 # Run all tests
@@ -162,24 +160,24 @@ bundle exec rspec spec/controllers/auth_controller_spec.rb
 # Run specific test types
 bundle exec rspec spec/models/
 bundle exec rspec spec/requests/
-\`\`\`
+```
 
 ### Test Database
 
-\`\`\`bash
+```bash
 # Setup test database
 set RAILS_ENV=test&& rails db:create
 set RAILS_ENV=test&& rails db:migrate
 
 # Reset test database
 set RAILS_ENV=test&& rails db:reset
-\`\`\`
+```
 
 ### Manual Testing
 
 #### API Testing with Postman
 
-\`\`\`
+```bash
 # Register a new user
 POST http://localhost:3000/auth/register
 Headers:
@@ -205,7 +203,7 @@ Body (raw JSON):
   "email": "test@example.com",
   "password": "password123"
 }
-\`\`\`
+```
 
 #### Browser Testing
 
@@ -231,7 +229,7 @@ Body (raw JSON):
 
 ## Project Structure
 
-\`\`\`
+```
 carshare/
 ├── backend/                 # Rails API
 │   ├── app/
@@ -255,7 +253,7 @@ carshare/
 │   ├── public/              # Public assets
 │   └── dist/                # Build output
 └── docs/                    # Documentation
-\`\`\`
+```
 
 ## Troubleshooting
 
@@ -264,36 +262,30 @@ carshare/
 #### Backend Issues
 
 **Issue**: `bundle install` fails
-\`\`\`bash
+```bash
 # Solution: Update bundler
 gem update bundler
 bundle install
-\`\`\`
+```
 
 **Issue**: Database connection errors
-\`\`\`bash
+```bash
 # Solution: Reset database
 rails db:drop db:create db:migrate db:seed
-\`\`\`
+```
 
 #### Frontend Issues
 
 **Issue**: `npm install` fails
-\`\`\`bash
+```bash
 # Solution: Clear npm cache
 npm cache clean --force
 rm -rf node_modules package-lock.json
 npm install
-\`\`\`
+```
 
 **Issue**: CORS errors
-\`\`\`bash
+```bash
 # Solution: Check backend CORS configuration
 # Ensure frontend URL is allowed in cors.rb
-\`\`\`
-
-**Issue**: API connection fails
-\`\`\`bash
-# Solution: Verify API URL in .env
-# Check if backend server is running on correct port
-\`\`\`
+```
