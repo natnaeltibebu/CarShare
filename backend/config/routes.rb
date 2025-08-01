@@ -7,17 +7,4 @@ Rails.application.routes.draw do
   
   # Resource routes
   resources :users, only: [:index, :show, :update]
-  resources :cars do
-    collection do
-      get :my_cars
-    end
-    member do
-      patch :update_status
-    end
-  end
-  resources :bookings do
-    member do
-      patch :update_status
-    end
-  end
 end
